@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashlight Trick</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card" style="--clr:#0f0;"></div>
+        <div class="card" style="--clr:rgb(224, 36, 108);"></div>
+        <div class="card" style="--clr:rgb(185, 230, 26);"></div>
+        <div class="card" style="--clr:rgb(14, 177, 189);"></div>
+        <div class="card" style="--clr:rgb(171, 192, 194);"></div>
+        <div class="card" style="--clr:#0f0;"></div>
+        <div class="card" style="--clr:rgb(224, 36, 108);"></div>
+        <div class="card" style="--clr:rgb(185, 230, 26);"></div>
+        <div class="card" style="--clr:rgb(14, 177, 189);"></div>
+        <div class="card" style="--clr:rgb(171, 192, 194);"></div>
+        <div class="card" style="--clr:#0f0;"></div>
+        <div class="card" style="--clr:rgb(224, 36, 108);"></div>
+        <div class="card" style="--clr:rgb(185, 230, 26);"></div>
+        <div class="card" style="--clr:rgb(14, 177, 189);"></div>
+        <div class="card" style="--clr:rgb(171, 192, 194);"></div>
+        <div class="card" style="--clr:rgb(245, 8, 8);"></div>
+    </div>
+    <script>
+        let card= document.querySelectorAll('.card');
+        card.forEach(card=>{
+            card.onmousemove =function(e){
+                let x=e.pageX -card.offsetLeft;
+                let y=e.pageY -card.offsetTop;
+
+                card.style.setProperty('--x',x+'px');
+                card.style.setProperty('--y',x+'px');
+            }
+        })
+    </script>
+</body>
+</html>
